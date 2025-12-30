@@ -23,3 +23,19 @@ def predict(data:InputData):
     x=np.array(data.features).reshape(1,-1)
     y=float(model.predict(x)[0])
     return {"predicted_speed":y}
+
+## Question 3: Backend Execution and Testing
+
+#Start the backend server
+The backend server was started using the Uvicorn command:
+uvicorn app:app --reload
+
+# Access the API
+The API was accessed at:
+http://127.0.0.1:8000
+
+# Send sample input
+Sample input data was sent using a browser/Postman.
+
+#Verify output
+The API returned the predicted traffic speed in JSON format.
